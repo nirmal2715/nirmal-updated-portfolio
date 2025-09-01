@@ -1937,3 +1937,7 @@ blockquote .designation {
     box-shadow: 0 25px 18px rgb(0 0 0 / 16%);
 }
 
+.shape-one,
+.shape-two {
+    display: none !important;
+}
