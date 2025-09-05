@@ -39,18 +39,64 @@
     -webkit-box-shadow: none;
     box-shadow: none;
     /* background-color: #1D2043; */
+  Background: #0D1B2A;
+
+/* Text (Gold Accent): #D4AF37;
+
+Secondary Text : #F5F5F5; */
 
 }
 
 :root {
     scroll-behavior: auto;
     --base-color: #A3A5A7;
-    --heading-color: #1D2043;
-    --primary-color: #DF5646;
+    --heading-color: #C9A227;
+    --primary-color: #50C878;
     --light-color: #FAFAFA;
     --base-font: 'Poppins', sans-serif;
     --heading-font: 'Playfair Display', serif;
+    
 }
+
+.social-style-one a i {
+    background: none !important;  /* remove white box */
+    color: inherit;              /* use default brand color */
+    font-size: 22px;             /* thoda bara for visibility */
+    transition: all 0.3s ease;   /* smooth hover */
+}
+
+.social-style-one a:hover i {
+    color: var(--heading-color) !important; /* gold hover effect */
+}
+.social-style-one a .fa-facebook-f { color: #1877F2; }   /* FB */
+.social-style-one a .fa-twitter { color: #1DA1F2; }      /* Twitter */
+.social-style-one a .fa-instagram { color: #E1306C; }    /* Insta */
+
+.social-style-one a:hover i {
+    color: #C9A227 !important;  /* gold hover */
+    text-shadow: 0 0 6px rgba(201,162,39,0.5);
+}
+/* Let's Chat button ko transparent aur clean banao */
+.lets-chat button {
+    background: none !important;   /* remove white background */
+    border: none;                  /* border remove */
+    padding: 6px 10px;             /* thoda spacing */
+    cursor: pointer;
+}
+
+/* Icon ka default style */
+.lets-chat button i {
+    color: #C9A227; /* gold (luxury touch) */
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.lets-chat button:hover i {
+    color: #50C878; /* emerald green highlight */
+    transform: scale(1.2); /* thoda zoom effect */
+}
+
 
 body {
     color: var(--base-color);
@@ -58,7 +104,15 @@ body {
     font-weight: 300;
     line-height: 32px;
     font-family: var(--base-font);
+   
 }
+/* hamburger lines */
+.nav-toggle-btn .hamburger span {
+    background: #fff !important; /* white color */
+}
+
+
+
 
 a {
     color: var(--base-color);
@@ -1944,3 +1998,74 @@ blockquote .designation {
 .shape-two {
     display: none !important;
 }
+
+
+
+
+
+
+  /* ----- HAMBURGER lines already fixed; keeping here if needed ----- */
+  .a-nav-toggle .hamburger .top-bun,
+  .a-nav-toggle .hamburger .meat,
+  .a-nav-toggle .hamburger .bottom-bun {
+    background:#fff !important;
+  }
+
+  /* ----- MENU: make open panel pure white, remove weird boxes/overlays ----- */
+  .header .menu,
+  .menu.active,
+  .menu.open,
+  .menu-open .menu {                     /* works if body gets `menu-open` */
+    background:#fff !important;
+    color:#1D2043 !important;            /* deep navy text */
+    box-shadow:none !important;
+    border:none !important;
+  }
+
+  /* kill decorative layers & boxes inside menu */
+  .header .menu::before,
+  .header .menu::after,
+  .menu::before,
+  .menu::after,
+  .menu-ornament,
+  .menu-main li::before,
+  .menu-main li::after {
+    display:none !important;
+    content:none !important;
+    background:none !important;
+    box-shadow:none !important;
+  }
+
+  /* reset any blend modes causing “invisible” text */
+  .header .menu, 
+  .header .menu * {
+    mix-blend-mode: normal !important;
+    background-color: transparent; /* let the white parent show */
+  }
+
+  /* menu links colors */
+  .menu a,
+  .menu-main ul li a {
+    color:#1D2043 !important;            /* navy */
+    font-weight:500;
+  }
+  .menu a:hover,
+  .menu-main ul li.active a,
+  .menu-main ul li a:focus {
+    color:#C9A227 !important;            /* gold hover/active */
+    text-shadow:none !important;
+  }
+
+  /* language pills / any tag-like items – remove boxes */
+  .menu-lang a {
+    background:transparent !important;
+    color:#1D2043 !important;
+    border:none !important;
+    box-shadow:none !important;
+  }
+
+  /* the dark overlay behind menu */
+  .hide-menu {
+    background:transparent !important;   /* remove blue/dark tint */
+  }
+
